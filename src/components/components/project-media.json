@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_components_project_medias",
+  "info": {
+    "displayName": "Project Media",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "Small": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Media": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
