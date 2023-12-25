@@ -4,32 +4,33 @@
   "info": {
     "singularName": "metadata",
     "pluralName": "metadatas",
-    "displayName": "Metadata"
+    "displayName": "Metadata",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Description": {
+    "description": {
       "type": "text",
       "required": true
     },
     "ogImage": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "favicon": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

@@ -17,10 +17,11 @@ export interface ComponentsProjectMedia extends Schema.Component {
   info: {
     displayName: 'Project Media';
     icon: 'landscape';
+    description: '';
   };
   attributes: {
-    Small: Attribute.Boolean & Attribute.Required & Attribute.DefaultTo<false>;
-    Media: Attribute.Media & Attribute.Required;
+    small: Attribute.Boolean & Attribute.Required & Attribute.DefaultTo<false>;
+    media: Attribute.Media & Attribute.Required;
   };
 }
 

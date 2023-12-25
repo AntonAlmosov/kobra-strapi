@@ -785,7 +785,7 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
     location: Attribute.String & Attribute.Required;
     audio: Attribute.Media & Attribute.Required;
     media: Attribute.Media & Attribute.Required;
-    link: Attribute.Component<'components.link', true> & Attribute.Required;
+    links: Attribute.Component<'components.link', true> & Attribute.Required;
     email: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -846,12 +846,13 @@ export interface ApiMetadataMetadata extends Schema.SingleType {
     singularName: 'metadata';
     pluralName: 'metadatas';
     displayName: 'Metadata';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Description: Attribute.Text & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
     ogImage: Attribute.Media & Attribute.Required;
     favicon: Attribute.Media & Attribute.Required;
     createdAt: Attribute.DateTime;
@@ -878,18 +879,19 @@ export interface ApiProjectProject extends Schema.CollectionType {
     singularName: 'project';
     pluralName: 'projects';
     displayName: 'Project';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Name: Attribute.String & Attribute.Required;
-    Description: Attribute.Text & Attribute.Required;
-    Cover: Attribute.Media & Attribute.Required;
-    References: Attribute.Media;
+    name: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    cover: Attribute.Media & Attribute.Required;
+    references: Attribute.Media;
     projectMedia: Attribute.Component<'components.project-media', true> &
       Attribute.Required;
-    slug: Attribute.UID<'api::project.project', 'Name'> & Attribute.Required;
+    slug: Attribute.UID & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
