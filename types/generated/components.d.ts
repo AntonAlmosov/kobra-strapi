@@ -5,10 +5,11 @@ export interface ComponentsLink extends Schema.Component {
   info: {
     displayName: 'Link';
     icon: 'link';
+    description: '';
   };
   attributes: {
     label: Attribute.String & Attribute.Required;
-    url: Attribute.String;
+    url: Attribute.String & Attribute.Required;
   };
 }
 

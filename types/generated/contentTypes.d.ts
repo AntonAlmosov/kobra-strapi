@@ -886,7 +886,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
-    description: Attribute.Text & Attribute.Required;
+    description: Attribute.Text;
     cover: Attribute.Media & Attribute.Required;
     references: Attribute.Media;
     projectMedia: Attribute.Component<'components.project-media', true> &
